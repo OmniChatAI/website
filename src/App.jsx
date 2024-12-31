@@ -36,18 +36,18 @@ const MainContent = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <header className="relative container mx-auto px-4 pt-32 pb-16 text-center">
+      <header className="relative container mx-auto px-4 pt-20 md:pt-32 pb-12 md:pb-16 text-center">
         <div className="relative z-10">
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4 md:mb-6">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-purple-600">
               One API, All Senses, True Agency
             </span>
           </h1>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto mb-12 text-white/80">
+          <p className="text-base sm:text-lg md:text-xl max-w-3xl mx-auto mb-8 md:mb-12 text-white/80 px-4">
             Build autonomous applications with AI that sees, hears, understands, and acts independently.
             Our universal API combines multimodal intelligence with true agentic behavior.
           </p>
-          <div className="flex justify-center space-x-4 mb-8">
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8 px-4">
             <button 
               onClick={() => window.open('https://t.me/crchatgptbot', '_blank')}
               className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-full transition-colors flex items-center"

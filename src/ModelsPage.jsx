@@ -116,7 +116,7 @@ const ModelsPage = () => {
               onClick={() => window.open('https://t.me/crchatgptbot', '_blank')}
               className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-full transition-colors flex items-center"
             >
-              <Bot className="mr-2" /> Try AI Agents
+              <Bot className="mr-2" /> Try AI Agent
             </button>
             <button 
               onClick={() => navigate('/setup')}

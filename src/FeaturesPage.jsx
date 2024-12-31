@@ -7,7 +7,7 @@ import {
   Target,
   Settings,
   Layers,
-  Zap,
+  Rocket,
   Globe,
   Code,
   Image,
@@ -34,20 +34,20 @@ const FeaturesPage = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <div className="relative container mx-auto px-4 pt-24 pb-16 text-center">
-        <h1 className="text-5xl font-bold mb-6">
+      <div className="relative container mx-auto px-4 pt-20 md:pt-24 pb-12 md:pb-16 text-center">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-purple-600">
             Autonomous AI Agent Features
           </span>
         </h1>
-        <p className="text-xl max-w-3xl mx-auto mb-12 text-white/80">
+        <p className="text-base sm:text-lg md:text-xl max-w-3xl mx-auto mb-8 md:mb-12 text-white/80 px-2">
           Build powerful autonomous applications with our agentic AI that thinks, decides, and acts independently
         </p>
       </div>
 
       {/* Main Features Grid */}
-      <section className="relative container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="relative container mx-auto px-4 py-8 md:py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {/* Autonomous Decision Making */}
           <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-8 hover:bg-white/20 transition-all">
             <div className="flex items-center mb-6">
@@ -93,7 +93,7 @@ const FeaturesPage = () => {
           {/* Proactive Actions */}
           <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-8 hover:bg-white/20 transition-all">
             <div className="flex items-center mb-6">
-              <Zap className="w-10 h-10 text-yellow-400 mr-4" />
+              <Rocket className="w-10 h-10 text-yellow-400 mr-4" />
               <h3 className="text-2xl font-semibold">Proactive Actions</h3>
             </div>
             <p className="text-white/70 mb-4">

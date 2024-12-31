@@ -1,12 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Zap } from 'lucide-react';
+import { Zap, Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const isActive = (path) => location.pathname === path;
+
+  const navItems = [
+    { path: '/features', label: 'Features' },
+    { path: '/models', label: 'Models' },
+    { path: '/setup', label: 'Setup' },
+    { path: '/pricing', label: 'Pricing' },
+    { path: '/blog', label: 'Blog' },
+  ];
+
+  const NavButton = ({ path, label }) => (
+    <button
+      onClick={() => {
+        navigate(path);
+        setIsMenuOpen(false);
+      }}
+      className={`${
+        isActive(path) ? 'text-white font-semibold' : 'text-white/70'
+      } hover:text-white transition-colors`}
+    >
+      {label}
+    </button>
+  );
 
   return (
     <nav className="z-50 w-full fixed top-0 left-0 bg-[#0B1120] shadow-lg">
@@ -19,55 +42,35 @@ const Navbar = () => {
             <Zap className="w-8 h-8 mr-2 text-yellow-400" />
             <h1 className="text-2xl font-bold text-white">OmniChat</h1>
           </div>
-          <div className="hidden md:flex items-center justify-center flex-1 mx-8">
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center justify-center flex-1 mx-16">
             <div className="flex items-center space-x-8">
-              <button
-                onClick={() => navigate('/features')}
-                className={`${isActive('/features') ? 'text-white font-semibold' : 'text-white/70'} hover:text-white transition-colors`}
-              >
-                Features
-              </button>
-              <button
-                onClick={() => navigate('/models')}
-                className={`${isActive('/models') ? 'text-white font-semibold' : 'text-white/70'} hover:text-white transition-colors`}
-              >
-                Models
-              </button>
-              <button
-                onClick={() => navigate('/setup')}
-                className={`${isActive('/setup') ? 'text-white font-semibold' : 'text-white/70'} hover:text-white transition-colors`}
-              >
-                Setup
-              </button>
-              <button
-                onClick={() => navigate('/pricing')}
-                className={`${isActive('/pricing') ? 'text-white font-semibold' : 'text-white/70'} hover:text-white transition-colors`}
-              >
-                Pricing
-              </button>
-              <button
-                onClick={() => navigate('/blog')}
-                className={`${isActive('/blog') ? 'text-white font-semibold' : 'text-white/70'} hover:text-white transition-colors`}
-              >
-                Blog
-              </button>
-              <button
-                onClick={() => navigate('/team')}
-                className={`${isActive('/team') ? 'text-white font-semibold' : 'text-white/70'} hover:text-white transition-colors`}
-              >
-                Team
-              </button>
+              {navItems.map((item) => (
+                <NavButton key={item.path} {...item} />
+              ))}
             </div>
           </div>
-          <div className="flex items-center">
-            <button
-              onClick={() => navigate('/signin')}
-              className="border border-blue-400 hover:bg-blue-400/10 px-4 py-2 rounded-full transition-colors text-blue-400"
-            >
-              Sign In
-            </button>
-          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden text-white p-2"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden mt-4 pb-4">
+            <div className="flex flex-col space-y-4">
+              {navItems.map((item) => (
+                <NavButton key={item.path} {...item} />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );
