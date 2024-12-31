@@ -7,6 +7,7 @@ import SetupPage from './SetupPage';
 import PricingPage from './PricingPage';
 import TeamPage from './TeamPage';
 import SignInPage from './SignInPage';
+import BlogPage from './BlogPage';
 
 const AppRouter = () => {
   return (
@@ -19,6 +20,7 @@ const AppRouter = () => {
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/team" element={<TeamPage />} />
         <Route path="/signin" element={<SignInPage />} />
+        <Route path="/blog" element={<BlogPage />} />
       </Routes>
     </Router>
   );

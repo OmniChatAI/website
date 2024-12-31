@@ -1,18 +1,13 @@
 import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
-import { useNavigate } from 'react-router-dom';
 import { 
-  Zap,
   Github,
-  X,
   Mail,
-  Link as LinkIcon,
-  Globe,
+  X,
+  Link as LinkIcon
 } from 'lucide-react';
 
 const TeamPage = () => {
-  const navigate = useNavigate();
-
   useEffect(() => {
     document.title = 'Team | OmniChat';
   }, []);
@@ -48,12 +43,12 @@ const TeamPage = () => {
             />
             
             <h2 className="text-2xl font-bold mb-2">Chaitanya Rahalkar</h2>
-            <p className="text-white/80 mb-6">Founder & Lead Developer</p>
+            <p className="text-white/80 mb-6">Founder & CEO</p>
 
-            <div className="flex items-center mb-6 bg-blue-600/20 backdrop-blur-lg border border-white/10 rounded-full px-4 py-2 text-sm text-white/80">
+            {/* <div className="flex items-center mb-6 bg-blue-600/20 backdrop-blur-lg border border-white/10 rounded-full px-4 py-2 text-sm text-white/80">
               <Globe className="w-4 h-4 mr-2 text-blue-400" />
               works @ <a href="https://block.xyz" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">Block, Inc.</a>
-            </div>
+            </div> */}
 
             <div className="flex items-center gap-3">
               <a 

@@ -46,6 +46,12 @@ const Navbar = () => {
                 Pricing
               </button>
               <button
+                onClick={() => navigate('/blog')}
+                className={`${isActive('/blog') ? 'text-white font-semibold' : 'text-white/70'} hover:text-white transition-colors`}
+              >
+                Blog
+              </button>
+              <button
                 onClick={() => navigate('/team')}
                 className={`${isActive('/team') ? 'text-white font-semibold' : 'text-white/70'} hover:text-white transition-colors`}
               >
@@ -53,15 +59,7 @@ const Navbar = () => {
               </button>
             </div>
           </div>
-          <div className="flex items-center space-x-4">
-            <a 
-              href="https://github.com/chaitanyarahalkar/omnichat" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition-colors text-white"
-            >
-              GitHub
-            </a>
+          <div className="flex items-center">
             <button
               onClick={() => navigate('/signin')}
               className="border border-blue-400 hover:bg-blue-400/10 px-4 py-2 rounded-full transition-colors text-blue-400"

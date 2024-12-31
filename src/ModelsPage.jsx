@@ -2,16 +2,14 @@ import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Zap, 
   Brain,
   Sparkles,
   Image as ImageIcon,
   Search,
-  Workflow,
-  MessageSquare,
   Code,
   Lightbulb,
-  Bot
+  Bot,
+  Target
 } from 'lucide-react';
 
 const ModelsPage = () => {
@@ -22,6 +20,19 @@ const ModelsPage = () => {
   }, []);
 
   const models = [
+    {
+      name: "Autonomous Agents",
+      icon: <Target className="w-10 h-10 text-red-400" />,
+      description: "Advanced agentic layer that enables models to think and act independently",
+      capabilities: [
+        "Autonomous decision making",
+        "Independent task execution",
+        "Self-directed learning",
+        "Proactive problem solving",
+        "Strategic planning"
+      ],
+      color: "red"
+    },
     {
       name: "GPT-4o",
       icon: <Brain className="w-10 h-10 text-blue-400" />,
@@ -92,20 +103,20 @@ const ModelsPage = () => {
         <div className="max-w-3xl mx-auto">
           <p className="text-xl text-white/80 mb-4">
             Our smart routing system automatically selects and combines the perfect AI models for your task.
-            Whether you need image generation, text analysis, or multimodal processing, OmniChat ensures optimal results
+            Whether you need autonomous agents, image generation, or text analysis, OmniChat ensures optimal results
             by choosing the right model combination in real-time.
           </p>
           <div className="flex items-center justify-center space-x-4 my-8">
-            <Workflow className="w-12 h-12 text-blue-400" />
+            <Target className="w-12 h-12 text-red-400" />
             <Brain className="w-12 h-12 text-purple-400" />
             <Bot className="w-12 h-12 text-green-400" />
           </div>
           <div className="flex justify-center space-x-4">
             <button 
-              onClick={() => navigate('/features')}
+              onClick={() => window.open('https://t.me/crchatgptbot', '_blank')}
               className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-full transition-colors flex items-center"
             >
-              <Bot className="mr-2" /> Explore Features
+              <Bot className="mr-2" /> Try AI Agents
             </button>
             <button 
               onClick={() => navigate('/setup')}
@@ -119,8 +130,8 @@ const ModelsPage = () => {
 
       {/* Models Grid */}
       <section className="relative container mx-auto px-4 py-12">
-        <h3 className="text-2xl font-bold mb-8 text-center">Available Models</h3>
-        <div className="grid md:grid-cols-2 gap-8">
+        <h3 className="text-2xl font-bold mb-8 text-center">Available Models & Agents</h3>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {models.map((model, index) => (
             <div 
               key={index}

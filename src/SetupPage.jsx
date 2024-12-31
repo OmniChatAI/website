@@ -1,25 +1,17 @@
 import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
-import { useNavigate } from 'react-router-dom';
 import { 
-  Zap,
-  Rocket,
-  Github,
-  MessageCircle,
-  Globe,
   Code,
-  ArrowRight,
-  Bot,
+  Github,
+  Blocks,
   Key,
   Cpu,
-  Terminal,
+  Rocket,
   CheckCircle,
-  Blocks
+  Terminal
 } from 'lucide-react';
 
 const SetupPage = () => {
-  const navigate = useNavigate();
-
   useEffect(() => {
     document.title = 'Setup | OmniChat';
   }, []);
