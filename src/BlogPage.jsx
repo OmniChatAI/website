@@ -122,27 +122,29 @@ const BlogPage = () => {
             <p className="text-xl text-white/80 max-w-3xl mx-auto mb-16">
               Stay updated with the latest news, product updates, and insights from the OmniChat team.
             </p>
-            <div className="grid grid-cols-2 gap-8 max-w-[1100px] mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-[1100px] mx-auto">
               {blogPosts.map((post) => (
                 <div 
                   key={post.id}
-                  className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl overflow-hidden hover:bg-white/10 transition-all cursor-pointer"
+                  className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl overflow-hidden hover:bg-white/10 transition-all cursor-pointer flex flex-col md:flex-col"
                   onClick={() => navigate(`/blog/${post.id}`)}
                 >
-                  <div className="w-full h-[240px] bg-gradient-to-br from-blue-500/20 to-purple-500/20 relative flex items-center justify-center">
+                  <div className="w-full h-[200px] md:h-[240px] bg-gradient-to-br from-blue-500/20 to-purple-500/20 relative flex items-center justify-center">
                     <img 
                       src="/logo512.png" 
                       alt="OmniChat"
-                      className="w-32 h-32 object-contain opacity-50"
+                      className="w-24 md:w-32 h-24 md:h-32 object-contain opacity-50"
                     />
                   </div>
-                  <div className="p-8">
-                    <div className="text-sm text-blue-400 font-medium uppercase mb-2">
-                      {post.category}
+                  <div className="p-6 md:p-8 flex-1">
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="text-sm text-blue-400 font-medium uppercase">
+                        {post.category}
+                      </div>
+                      <div className="text-sm text-white/60">{post.date}</div>
                     </div>
-                    <h2 className="text-2xl font-bold mb-4">{post.title}</h2>
-                    <div className="text-white/60 mb-4">{post.date}</div>
-                    <p className="text-white/70 line-clamp-3">{post.excerpt}</p>
+                    <h2 className="text-xl md:text-2xl font-bold mb-3">{post.title}</h2>
+                    <p className="text-white/70 line-clamp-2 md:line-clamp-3">{post.excerpt}</p>
                   </div>
                 </div>
               ))}
