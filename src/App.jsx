@@ -116,13 +116,85 @@ const MainContent = () => {
         </div>
       </section>
 
+      {/* Backed By Section */}
+      <section className="relative bg-[#1E2B7C] px-4 py-24">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl md:text-6xl font-bold mb-4">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
+              Backed By
+            </span>
+          </h2>
+          <p className="text-white/70 text-xl md:text-2xl">Proud to be supported by leading startup programs</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 max-w-6xl mx-auto">
+          {/* Add your incubator/program logos here */}
+          <div className="flex items-center justify-center p-8">
+            <img 
+              src="/images/incubator1.png" 
+              alt="Microsoft"
+              className="max-h-28 md:max-h-32 opacity-80 hover:opacity-100 transition-opacity"
+            />
+          </div>
+          <div className="flex items-center justify-center p-8">
+            <img 
+              src="/images/incubator2.png" 
+              alt="Incubator 2"
+              className="max-h-28 md:max-h-32 opacity-80 hover:opacity-100 transition-opacity"
+            />
+          </div>
+          <div className="flex items-center justify-center p-8">
+            <img 
+              src="/images/incubator3.png" 
+              alt="Incubator 3"
+              className="max-h-28 md:max-h-32 opacity-80 hover:opacity-100 transition-opacity"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Telegram Start Section */}
+      <section className="relative container mx-auto px-4 py-12">
+        <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-lg border border-white/20 rounded-xl p-8">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="mb-6 md:mb-0 md:mr-8">
+              <h3 className="text-2xl font-bold mb-4">Experience Autonomous AI in Action</h3>
+              <p className="text-white/80 mb-4">
+                See how our agentic AI operates in real-time through our Telegram integration.
+                Watch as it understands context, makes decisions, and takes action autonomously.
+              </p>
+              <div className="flex space-x-4">
+                <a 
+                  href="https://t.me/crchatgptbot" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-full transition-colors flex items-center"
+                >
+                  <MessageCircle className="mr-2" /> Try AI Agent
+                </a>
+                <a 
+                  href="https://docs.tryomni.chat" 
+                  className="px-6 py-3 border border-white/30 hover:bg-white/10 rounded-full transition-colors flex items-center"
+                >
+                  View API Docs
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Use Cases Section */}
       <section className="relative container mx-auto px-4 py-16">
-        <h2 className="text-3xl font-bold text-center mb-12">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-purple-600">
-            Transform Your Applications with Agentic AI
-          </span>
-        </h2>
+        <div className="text-center mb-16">
+          <h2 className="text-5xl md:text-6xl font-bold mb-4">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-purple-600">
+              Transform Your Applications
+            </span>
+          </h2>
+          <p className="text-white/70 text-xl md:text-2xl max-w-4xl mx-auto">
+            Discover how our autonomous AI agents can revolutionize your software
+          </p>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-8">
             <h3 className="text-xl font-semibold mb-4 text-white flex items-center">
@@ -166,37 +238,6 @@ const MainContent = () => {
               Deploy agents that independently gather information, verify facts, and provide comprehensive insights.
               Ideal for research automation and data analysis tasks.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Telegram Start Section */}
-      <section className="relative container mx-auto px-4 py-12">
-        <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-lg border border-white/20 rounded-xl p-8">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="mb-6 md:mb-0 md:mr-8">
-              <h3 className="text-2xl font-bold mb-4">Experience Autonomous AI in Action</h3>
-              <p className="text-white/80 mb-4">
-                See how our agentic AI operates in real-time through our Telegram integration.
-                Watch as it understands context, makes decisions, and takes action autonomously.
-              </p>
-              <div className="flex space-x-4">
-                <a 
-                  href="https://t.me/crchatgptbot" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-full transition-colors flex items-center"
-                >
-                  <MessageCircle className="mr-2" /> Try AI Agent
-                </a>
-                <a 
-                  href="https://docs.tryomni.chat" 
-                  className="px-6 py-3 border border-white/30 hover:bg-white/10 rounded-full transition-colors flex items-center"
-                >
-                  View API Docs
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </section>

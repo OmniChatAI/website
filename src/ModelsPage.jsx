@@ -95,7 +95,7 @@ const ModelsPage = () => {
 
       {/* Hero Section */}
       <div className="relative container mx-auto px-4 pt-24 pb-8 text-center">
-        <h1 className="text-6xl font-bold mb-4">
+        <h1 className="text-5xl font-bold mb-6">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-purple-600">
             Intelligent Model Selection
           </span>
