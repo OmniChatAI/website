@@ -16,6 +16,7 @@ const Navbar = () => {
     { path: '/pricing', label: 'Pricing' },
     { path: '/blog', label: 'Blog' },
     { path: '/team', label: 'Team' },
+    { path: '/careers', label: 'Careers' },
   ];
 
   const NavButton = ({ path, label }) => (

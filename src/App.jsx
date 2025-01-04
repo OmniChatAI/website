@@ -17,6 +17,7 @@ import SetupPage from './SetupPage';
 import TeamPage from './TeamPage';
 import PricingPage from './PricingPage';
 import BlogPage from './BlogPage';
+import CareersPage from './CareersPage';
 
 // Main website content component
 const MainContent = () => {
@@ -265,6 +266,7 @@ const App = () => {
         <Route path="/team" element={<TeamPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:postId" element={<BlogPage />} />
+        <Route path="/careers" element={<CareersPage />} />
       </Routes>
     </Router>
   );
